@@ -1,0 +1,109 @@
+{% if msg %}
+<script>
+    alert('{{ msg }}');
+</script>
+{% endif %}
+{% load static %}
+<!---import pandas pd
+	#df['b'] = df['a'].apply(lambda x:HTML('vendor/bootstrap/css/bootstrap.min.css'.format(x)))--->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Student Request Portal</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico'%}">
+
+    <!---<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">--->
+	<link rel="stylesheet" href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/animate/animate.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static '/vendor/css-hamburgers/hamburgers.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css'%}">
+
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+
+				<form class="login100-form validate-form" method="post">
+					<span class="login100-form-title">
+						Enter Admission Number
+					</span>
+
+
+
+					<div class="wrap-input100 validate-input" data-validate = "Admission Number is required">
+						<input class="input100" type="number" name="admno" placeholder="Admission Number">
+						<span class="focus-input100"></span>
+{#						<span class="symbol-input100">#}
+{#							<i class="fa fa-lock" aria-hidden="true"></i>#}
+{#						</span>#}
+					</div>
+
+
+
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" value="display" name="display" formaction="/display/">
+							Submit
+						</button>
+					</div>
+                    <!--
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+						-->
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAZA4gUvaOJf817zs3pHPE38ZcJp8lTn3A",
+    authDomain: "iimt-hostel-dc91e.firebaseapp.com",
+    databaseURL: "https://iimt-hostel-dc91e.firebaseio.com",
+    projectId: "iimt-hostel-dc91e",
+    storageBucket: "",
+    messagingSenderId: "344340173967"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+<!--===============================================================================================-->
+	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="static/js/main.js"></script>
+
+</body>
+</html>
